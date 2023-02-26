@@ -5,13 +5,13 @@ namespace NLayer.Core.Services
     public interface IService<T> where T : class
     {
         Task<T> GetByIdAsync(int id);
-        IQueryable<T> GellAll(Expression<Func<T, bool>> expression);
+        Task<IEnumerable<T>> GellAllAsync();
         IQueryable<T> Where(Expression<Func<T, bool>> expression);
         Task<bool> AnyAsync(Expression<Func<T, bool>> expression);
         Task AddAsync(T entity);
         Task AddRangeAsync(IEnumerable<T> entities);
-        void Update(T entity);
-        void Remove(T entity);
-        void RemoveRange(IEnumerable<T> entities);
+        Task UpdateAsync(T entity);
+        Task RemoveAsync(T entity);
+        Task RemoveRangeAsync(IEnumerable<T> entities);
     }
 }
