@@ -2,9 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace NLayer.API.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+
+    public class WeatherForecastController : CustomBaseController
     {
         private static readonly string[] Summaries = new[]
         {
