@@ -4,8 +4,8 @@ using NLayer.Core.Services;
 
 namespace NLayer.API.Controllers
 {
-    
-    [ApiController]
+
+
     public class CategoriesController : CustomBaseController
     {
         private readonly ICategoryService _categoryService;
