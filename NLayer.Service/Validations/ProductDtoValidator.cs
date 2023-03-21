@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLayer.Service.Services.Validations
+namespace NLayer.Service.Validations
 {
     public class ProductDtoValidator : AbstractValidator<ProductDto>
     {

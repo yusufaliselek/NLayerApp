@@ -33,7 +33,7 @@ namespace NLayer.Caching
 
             if(!_memoryCache.TryGetValue(CacheProductKey, out _)) //memory de allocate etmesini engellemek deallocate
             {
-                _memoryCache.Set(CacheProductKey, _repository.GetProductsWithCategory());
+                _memoryCache.Set(CacheProductKey, _repository.GetProductsWithCategory().Result);
             }
         }
 
@@ -69,7 +69,7 @@ namespace NLayer.Caching
 
             if (product == null)
             {
-                throw new NotFoundException($"{product.Name}({id}) not found");
+                throw new NotFoundException($"{typeof(Product).Name}({id}) not found");
             }
 
             return Task.FromResult(product);

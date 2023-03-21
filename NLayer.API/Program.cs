@@ -8,7 +8,7 @@ using NLayer.API.Middlewares;
 using NLayer.API.Modules;
 using NLayer.Repository;
 using NLayer.Service.Mapping;
-using NLayer.Service.Services.Validations;
+using NLayer.Service.Validations;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);

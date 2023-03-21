@@ -7,14 +7,14 @@ using System.Linq.Expressions;
 
 namespace NLayer.Service.Services
 {
-    public class Service<T> : IService<T> where T : class
+    public class ProductServiceWithNoCaching<T> : IService<T> where T : class
     {
 
         private readonly IGenericRepository<T> _repository;
 
         private readonly IUnitOfWork _unitOfWork;
 
-        public Service(IGenericRepository<T> repository, IUnitOfWork unitOfWork)
+        public ProductServiceWithNoCaching(IGenericRepository<T> repository, IUnitOfWork unitOfWork)
         {
             _repository = repository;
             _unitOfWork = unitOfWork;
